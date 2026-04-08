@@ -15783,3 +15783,113 @@ p.order-again .button:after {
   background-color: var(--bww-yellow) !important;
   color: var(--bww-black) !important;
 }
+
+/* Veggilicious Section - Center Alignment and Layout */
+.veggilicious-section {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  text-align: center !important;
+  min-height: 500px;
+}
+
+.veggilicious-section .product-wrapper {
+  width: 100%;
+}
+
+.veggilicious-section .product-inner {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 450px;
+  margin: 0 auto !important;
+  display: inline-block;
+}
+
+/* --- Mobile Header: Balanced Triple-Column Layout --- */
+@media (max-width: 767px) {
+  /* 1. Header Container */
+  .header-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 10px 10px 10px !important;
+    min-height: 120px !important; /* Extra height for the big logo + phone */
+    position: relative !important;
+    background-color: #111111 !important;
+  }
+
+  /* 2. Menu Toggle - Anchored to the far left */
+  .main-navigation {
+    position: absolute !important;
+    left: 15px !important;
+    top: 35px !important;
+    z-index: 999;
+  }
+
+  /* 3. CENTER LOGO - Forced absolute centering */
+  .site-branding {
+    position: relative !important;
+    margin: 0 0 15px 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+
+  #header-logo {
+    display: block !important;
+    max-width: 170px !important; /* Big logo */
+    width: 170px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.4));
+  }
+
+  /* 4. BIG PHONE - Centered directly below */
+  .header-info-wrapper {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* KILL ALL OFF-CENTER CLUTTER */
+  .site-header-cart-v2,
+  .po-scooter,
+  .header-logo-wrapper {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .header-phone-numbers .intro-text {
+    font-size: 11px !important;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    display: block !important;
+    margin-bottom: 2px;
+  }
+
+  /* Safari Color & Big Size Fix */
+  .header-phone-numbers .phone-number,
+  .header-phone-numbers a,
+  .header-phone-numbers a[href^="tel"] {
+    font-size: 26px !important; /* Larger impact */
+    font-weight: 900 !important;
+    color: #FFD200 !important; /* BWW Yellow */
+    text-decoration: none !important;
+    display: block !important;
+    line-height: 1 !important;
+  }
+}
+
+/* Add this to the top of your CSS to stop Safari from auto-styling */
+meta[name="format-detection"] {
+  content: "telephone=no";
+}
